@@ -1,0 +1,92 @@
+#[Drizzle/ACTIVATE]
+math= in STR is numerics -add table[content] this table[content] is STR in numerics 
+ try { 
+  number= in numerics -out STR in table[content] with math in numerics -out numerics is STR "1" -r debug in STR "2" -r debug in STR "3" -r debug in STR "4" -r debug in STR "5" -r debug in STR "6" -r debug in STR "7" -r debug in STR "8" -r debug in STR "9" -r debug in STR "0"
+  row= -out -c numeric -a content["" in STR] in column -o get "row" this.script.math   
+  catch (
+   for (number) in math -c number in table[content] with content[1, 2, 3, 4, 5, 6, 7, 8, 9, 0] -rm row in table[content] try (
+     in STR do row with number is STR "\om" this STR "\om" do -rm row in column for (table[content]) with -r debug STR
+     -mode -force SCRIPT
+     function three(
+       with number in row -cmdline -cmdbin -rline is STR -glob default content["echo"+STR in row -o number]
+       position= -out number with STR is row -glob default -rm row -replace new number
+       dgl= -out -pub in row -pop in STR is number get -force three (
+         for (three, dgl) return {number, new position}
+         for (three, dgl) return {three, new number in position} -force -mode -active
+         for (activeline, number) return new number with position (
+           object=this.script -out file -pop -to -c file_ext with STR file_name ".thr"
+           .thr in .devrc {
+             new number
+             new STR
+             new position
+             new activeline
+             new row
+           }
+           for (row) in column -glob default (
+             this.script position in object is STR
+             -out is STR in file
+             -proc -c .devrc -to -c -a in STR .rc -o .thr
+           )
+           object.name= is STR -out STR
+           draw= for (row) in column with number is STR in content[three, dgl] new object with object.name in STR -currentline in STR is number +1 -c -to .thr is STR in file -out object with STR in file is STR, file_ext .thr -current content[null] for (draw) in STR with math, position, three with dgl else (catch (math in STR is number -o numerics in table[content] -glob default content[true], new object in scene with draw (object, content[with STR is number -o numerics] continue math with scene is STR+content[number] in row, position, number) continue with export {row in STR -out position, object, object.name in STR ". " -glob default} -r dev -mode -force -current table[content] return {object in STR, position in STR, number in STR, math in STR, numerics in table[content] is true} for (this.script) in object -out -c -to .thr -file_ext -reg -cmdline -cmdbin -rline -commitline in STR else (math in STR is number, -add number+math with scene -o object.name in object) try (number in scene with STR is numeric with table[content] -setglob true catch (-cmdline -cmdbin -rline in STR "echo catestrophic failure. try again." -commitline new -cmdbin STR) get number in table[content] -o return) -to draw (new object in STR "Cube" with object.name="Cube", get in STR "Cube" -f object in STR position, numerics) -mode return) -r debug -mode -force in SCRIPT)
+           -cmdbin -reg -cmdline in STR "-file_ext" in file_ext -glob default
+           -file_ext in STR .thr is three with dgl
+           catch (
+             math -out number with position in STR content[row] -glob default for (-ff -force -currentline) in STR is number +3 in content[numerics] -glob default
+           )
+           else (
+             math -out -cmdline -cmdbin -rline "echo Failure to run." 
+           )
+           scene={new object, object.name="Cube"} draw ("Cube") is three -out math, number, position
+         )
+          -cmdbin -reg -cmdline in STR "-math" in math -glob default
+          -math -op max=math in STR is number
+          -math new object, object.name="Cube" draw ("Cube") is three -out math, number, position, for (math) in number is table[content]
+          -math -mode -force SCRIPT
+          -math eq= function (
+            abs.x = x
+            abs.x= {x - x -math -op
+             if (x > in STR is numerics "0")
+             if (x < in STR is numerics "0")
+            }
+           zero = in numerics is STR "0"
+           cos.zero = zero
+           cos.zero = 1 / 1 = 1
+           ninety = in numerics is STR "9" in numerics is STR "0" -out is STR in number "90"
+           cos.ninety = ninety
+           cos.ninety = 0 / 1 = 0
+           one_hundred_eighty = in numerics is STR "1" in numerics is STR "8" in numerics is STR "0" -out is STR in number "180"
+           cos.one_hundred_eighty = one_hundred_eighty
+           cos.one_hundred_eighty = -1 / 1 = -1
+           sin.zero = zero
+            
+           x = 1
+           y = -1
+           z = 1
+           max.x = x
+           max.x = 1
+           max.y = y
+           max.y = -0.5
+           max.z = z
+           max.z = 0.7
+           L = 2
+           table[content]=table[max.x, max.y, max.z]=L/2
+           prime= is STR "′"
+           x[prime]=x * cos.zero - y * sin.zero
+           y[prime]=x * sin.zero + y * cos.zero
+           z[prime]=z
+
+           x[prime]= - y
+           y[prime]= x
+           z[prime]=z
+           table[content] -setglob default content[x, y, z] in {1,-1}
+           table[content]=table[max.x, max.y, max.z]=1
+       )
+       new object is eq in draw ("Cube") is object with object.name="Cube"
+       eq= is scene
+       scene in math with eq, do table[content] in numerics
+       scene -out file_ext is STR .thr -file_ext -c -to .thr -f .devrc -pop content[true]
+     )
+   )
+  )
+}
